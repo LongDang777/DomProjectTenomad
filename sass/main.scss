@@ -1,0 +1,14 @@
+//Base
+@import './Base/_customize.scss';
+
+//Componnents
+@import './components/_button.scss';
+
+//Layouts
+@import './Layouts/_header.scss';
+
+//Pages
+@import './Pages/_home.scss';
+@import '../Pages/colorFipper/_colorFipper.scss'
+
+
