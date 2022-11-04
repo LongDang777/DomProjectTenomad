@@ -6,21 +6,27 @@ const data = [
     footer: 'Color Fliper'
   },
   {
-    id: 'simpleCounter',
-    href: './Pages/simpleCounter/simpleCounter.html',
+    id: 'counter',
+    href: './Pages/counter/counter.html',
     img: './img/image02.webp',
     footer: 'Simple Counter'
   },
   {
-    id: 'rewiewsQuotes',
-    href: './Pages/rewiewsQuotes/rewiewsQuotes.html',
+    id: 'review',
+    href: './Pages/ReviewQuotes/review.html',
     img: './img/image03.webp',
     footer: 'Rewiews Quotes'
   },
   {
     id: 'navbar',
-    href: './Pages/navbar/navbar.html',
+    href: './Pages/Navbar/navbar.html',
     img: './img/image04.webp',
+    footer: 'Navbar'
+  },
+  {
+    id: 'navbar',
+    href: './Pages/Navbar/navbar.html',
+    img: './img/image05.webp',
     footer: 'Navbar'
   }
 ]
