@@ -1,9 +1,16 @@
 /*
 =============== 
-Fonts
+Fonts Awesome 6.1.1
 ===============
 */
 @import url( "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+/*
+=============== 
+Fonts
+===============
+*/
+
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
@@ -174,7 +181,6 @@ p {
 }
 
 /*  global classes */
-
 
 body {
   font-family: var(--ff-secondary);
