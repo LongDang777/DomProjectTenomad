@@ -24,10 +24,40 @@ const data = [
     footer: 'Navbar'
   },
   {
-    id: 'navbar',
-    href: './Pages/Navbar/navbar.html',
+    id: 'sidebar',
+    href: './Pages/Sidebar/sidebar.html',
     img: './img/image05.webp',
-    footer: 'Navbar'
+    footer: 'Sidebar'
+  },
+  {
+    id: 'modal',
+    href: './Pages/Modal/modal.html',
+    img: './img/image06.webp',
+    footer: 'Modal'
+  },
+  {
+    id: 'question',
+    href: './Pages/Question/question.html',
+    img: './img/image07.webp',
+    footer: 'Question'
+  },
+  {
+    id: 'menu',
+    href: './Pages/Menu/menu.html',
+    img: './img/image08.webp',
+    footer: 'Menu'
+  },
+  {
+    id: 'video',
+    href: './Pages/Video/video.html',
+    img: './img/image09.webp',
+    footer: 'Video'
+  },
+  {
+    id: 'croll',
+    href: './Pages/Scroll/scroll.html',
+    img: './img/image10.webp',
+    footer: 'Sroll'
   }
 ]
 
