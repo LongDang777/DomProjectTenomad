@@ -2,18 +2,48 @@ nav {
   background: var(--clr-white);
   padding: 1rem 1.5rem;
 }
+
 /* fixed nav */
 .fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  transform: var(--transition-long);
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+  animation: headerAnimation .7s;
 }
+
+@keyframes headerAnimation {
+  0% {
+    opacity: 0;
+    padding:  0 20px;
+    background-color: #488589;
+  }  
+  100% {
+    opacity: 1;
+  }
+}
+.fixed-nav-ontop {
+  animation: ontop .7s;
+  
+}
+
+@keyframes ontop {
+  0% {
+    opacity: 0;
+    background-color: transparent;
+  }  
+  100% {
+    /* opacity: 1; */
+  }
+}
+
 .fixed-nav .links a {
   color: var(--clr-grey-1);
 }
+
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
@@ -27,6 +57,7 @@ nav {
 img:not(.nav-logo) {
   width: auto;
 }
+
 .nav-toggle {
   font-size: 1.5rem;
   color: var(--clr-grey-1);
@@ -35,20 +66,26 @@ img:not(.nav-logo) {
   transition: var(--transition);
   cursor: pointer;
 }
+
 .nav-toggle:hover {
   color: var(--clr-secondary);
 }
+
 .logo {
   height: 50px;
 }
+
 .links-container {
   height: 0;
   overflow: hidden;
   transition: var(--transition);
 }
+
 .show-links {
+  /* if use toggle('show-links) */
   height: 200px;
 }
+
 .links a {
   background: var(--clr-white);
   color: var(--clr-grey-5);
@@ -60,13 +97,16 @@ img:not(.nav-logo) {
   font-weight: bold;
   padding: 0.75rem 0;
 }
+
 .links a:hover {
   color: var(--clr-grey-1);
 }
+
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
   }
+
   .nav-center {
     width: 90vw;
     max-width: 1170px;
@@ -75,18 +115,23 @@ img:not(.nav-logo) {
     align-items: center;
     justify-content: space-between;
   }
+
   .nav-header {
     padding: 0;
   }
+
   .nav-toggle {
     display: none;
   }
+
   .links-container {
     height: auto !important;
   }
+
   .links {
     display: flex;
   }
+
   .links a {
     background: transparent;
     color: var(--clr-white);
@@ -99,32 +144,38 @@ img:not(.nav-logo) {
     font-weight: bold;
     padding: 0;
   }
+
   .links a:hover {
     color: var(--clr-white);
   }
 }
-/* hero */
+
+/* header */
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url(./hero-bcg.jpeg) center/cover no-repeat;
 }
+
 .banner {
   min-height: 100vh;
   display: grid;
   place-items: center;
   text-align: center;
 }
+
 .container h1 {
   color: var(--clr-white);
   text-transform: uppercase;
 }
+
 .container p {
   color: var(--clr-white);
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
 }
+
 .btn-white {
   font-weight: normal;
   color: var(--clr-white);
@@ -132,37 +183,50 @@ header {
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
+
+.btn {
+  font-family: var(--ff-secondary);
+}
+
 .btn:hover {
   color: var(--clr-secondary);
   background: var(--clr-white);
 }
+
 @media screen and (min-width: 768px) {
   .container p {
     max-width: 40rem;
   }
 }
+
 /* sections and title */
 .title h2 {
   text-align: center;
   text-transform: uppercase;
 }
+
 .title span {
   color: var(--clr-secondary);
 }
 
+#home,
 #about,
 #services,
 #tours {
+  scroll-margin-top: 5rem;
   padding: 0;
   height: 80vh;
 }
+
 #services {
   background: var(--clr-white);
 }
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
 }
+
 footer p {
   color: var(--clr-white);
   text-align: center;
@@ -174,21 +238,24 @@ footer p {
 .top-link {
   font-size: 1.25rem;
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--clr-secondary);
+
+  bottom: 2rem;
+  right: 2rem;
   width: 2rem;
   height: 2rem;
-  display: grid;
-  place-items: center;
+
+  text-align: center;
   border-radius: var(--radius);
+  background: var(--clr-secondary);
   color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
+
+  animation: bounce 5s ease-in-out infinite;
 
   visibility: hidden;
   z-index: -100;
 }
-.show-link {
+
+.move-top {
   visibility: visible;
   z-index: 100;
 }
@@ -197,9 +264,11 @@ footer p {
   0% {
     transform: scale(1);
   }
+
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }

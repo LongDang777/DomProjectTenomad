@@ -58,6 +58,36 @@ const data = [
     href: './Pages/Scroll/scroll.html',
     img: './img/image10.webp',
     footer: 'Sroll'
+  },
+  {
+    id: 'tabs',
+    href: './Pages/Tabs/tabs.html',
+    img: './img/image11.webp',
+    footer: 'Tabs'
+  },
+  {
+    id: 'countDown',
+    href: './Pages/Countdown/countDown.html',
+    img: './img/image12.webp',
+    footer: 'CountDown Timer'
+  },
+  {
+    id: 'lorem',
+    href: './Pages/Lorem/lorem.html',
+    img: './img/image13.webp',
+    footer: 'Lorem Ipsum'
+  },
+  {
+    id: 'Grocery',
+    href: './Pages/Grocery/grocery.html',
+    img: './img/image14.webp',
+    footer: 'Grocery Bud'
+  },
+  {
+    id: 'Slider',
+    href: './Pages/Slider/slider.html',
+    img: './img/image15.webp',
+    footer: 'Slider'
   }
 ]
 
