@@ -91,7 +91,6 @@ window.addEventListener("DOMContentLoaded", () => {
   displayMenuItems(menu);
 });
 
-
 const categories = menu.reduce((total, item) => {
   if (!total.includes(item.category)) {
     total.push(item.category)
@@ -137,9 +136,9 @@ const displayMenuButtons = () => {
   })
 }
 
-const displayMenuItems = menuItem => {
+const displayMenuItems = item => {
 
-  let displayMenu = menuItem.map(item => {
+  let displayMenu = item.map(item => {
     return (
       `<article class="menu-item">
            <img src=${item.img} class="photo" alt=${item.title} />

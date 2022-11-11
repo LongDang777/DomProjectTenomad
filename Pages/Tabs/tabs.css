@@ -16,6 +16,7 @@
   border-radius: var(--radius);
   object-fit: cover;
   height: 20rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 992px) {
@@ -73,17 +74,24 @@
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   padding: 2rem 1.5rem;
+  transition: all 0.5s;
 }
 
 /* hide content */
 .content {
   display: none;
+  transition: all 0.5s;
+}
+.active {
+  transition: all 0.5s;
 }
 
 .tab-btn.active {
   background: var(--clr-white);
+  transition: all 0.5s;
 }
 
-.content.active {
+.active.content  {
+  transition: all 0.5s;
   display: block;
 }

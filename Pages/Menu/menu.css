@@ -1,9 +1,3 @@
-/*
-=============== 
-Menu
-===============
-*/
-
 .menu {
   padding: 5rem 0;
 }
@@ -58,6 +52,9 @@ Menu
   height: 200px;
   border: 0.25rem solid var(--clr-gold);
   border-radius: var(--radius);
+}
+img:not(.logo) {
+  width: 100%;
 }
 .item-info header {
   display: flex;
