@@ -8,11 +8,11 @@ function getElement(selection) {
   );
 }
 
-class Gallerys {
+class Gallery {
   constructor(element) {
     this.container = element;
     this.list = [...element.querySelectorAll('.img')];
-
+    // target
     this.modal = getElement('.modal');
     this.modalImg = getElement('.main-img');
     this.imageName = getElement('.image-name');
@@ -26,9 +26,9 @@ class Gallerys {
     this.prevImage = this.prevImage.bind(this);
     this.chooseImage = this.chooseImage.bind(this);
 
-    
-
-    this.container.addEventListener('click', function (e) {
+    this.container.addEventListener(
+      'click',
+      function (e) {
         if (e.target.classList.contains('img')) {
           this.openModal(e.target, this.list);
         }
@@ -36,11 +36,12 @@ class Gallerys {
     );
   }
   openModal(selectedImage, list) {
+
     this.setMainImage(selectedImage);
+
     this.modalImages.innerHTML = list
-      .map(function (image) {
-        return `<img src="${image.src
-          }" title="${image.title}" data-id="${image.dataset.id}" class="${selectedImage.dataset.id === image.dataset.id ? 'modal-img selected' : 'modal-img'}"/>`;
+      .map(({ src, title, dataset }) => {
+        return `<img src="${src}" title="${title}" data-id="${dataset.id}" class="${selectedImage.dataset.id === dataset.id ? 'modal-img selected' : 'modal-img'}"/>`;
       })
       .join('');
     this.modal.classList.add('open');
@@ -50,9 +51,9 @@ class Gallerys {
     this.modalImages.addEventListener('click', this.chooseImage);
   }
 
-  setMainImage(selectedImage) {
-    this.modalImg.src = selectedImage.src;
-    this.imageName.textContent = selectedImage.title;
+  setMainImage({ src, title }) {
+    this.modalImg.src = src;
+    this.imageName.textContent = title;
   }
 
   closeModal() {
@@ -65,7 +66,7 @@ class Gallerys {
   nextImage() {
     const selected = this.modalImages.querySelector('.selected');
     const next =
-selected.nextElementSibling || this.modalImages.firstElementChild;
+      selected.nextElementSibling || this.modalImages.firstElementChild;
     selected.classList.remove('selected');
     next.classList.add('selected');
     this.setMainImage(next);
@@ -89,5 +90,5 @@ selected.nextElementSibling || this.modalImages.firstElementChild;
   }
 }
 
-const nature = new Gallerys(getElement('.nature'));
-const city = new Gallerys(getElement('.city'));
+const nature = new Gallery(getElement('.nature'));
+const city = new Gallery(getElement('.city'));
