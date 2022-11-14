@@ -9,7 +9,9 @@ nav {
   justify-content: space-between;
   padding: 1rem;
 }
-
+img:not(.nav-logo) {
+  width: auto;
+}
 .logo {
   height: 40px;
 }

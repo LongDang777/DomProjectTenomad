@@ -63,10 +63,14 @@
 .show-text .question-text {
   padding: 1rem 0 1.5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  height: 6rem;
+  height: 6.5rem;
   transition:  all 0.5s;
 }
-
+@media screen and (max-width:800px) {
+  .show-text .question-text {
+    height: 7.5rem;
+  }
+}
 .minus-icon {
   display: none;
 }

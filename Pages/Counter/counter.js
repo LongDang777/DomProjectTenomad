@@ -1,18 +1,47 @@
-const number = document.getElementById('value');
-const btns = document.querySelectorAll('.btn');
-
-let count = 0;
-
-btns.forEach(btn => {
-  btn.onclick = (e) => {
-    const contain = (value) => e.target.classList.contains(value)
-
-    contain('decrease')
-      ? (count--, number.style.color = 'red')
-      : contain('increase')
-        ? (count++, number.style.color = 'green')
-        : (count = 0, number.style.color = '#222');
-
-    number.textContent = count;
+const getElement = (selection) => {
+  const element = document.querySelector(selection);
+  if (element) {
+    return element
   }
-})
+  throw new Error(
+    `Please check "${element}" selector, no such element exists `
+  )
+}
+
+class Counter {
+  constructor(element, value) {
+
+    this.value = value;
+    this.resetBtn = element.querySelector('.reset');
+    this.increaseBtn = element.querySelector('.increase');
+    this.decreaseBtn = element.querySelector('.decrease');
+    this.valueDOM = element.querySelector('.value');
+    this.valueDOM.textContent = this.value;
+
+    this.increase = this.increase.bind(this);
+    this.decrease = this.decrease.bind(this);
+    this.reset = this.reset.bind(this);
+
+    this.increaseBtn.addEventListener('click', this.increase);
+    this.decreaseBtn.addEventListener('click', this.decrease);
+    this.resetBtn.addEventListener('click', this.reset);
+  }
+
+  increase() {
+    this.value++;
+    this.valueDOM.textContent = this.value;
+  }
+  decrease() {
+    this.value--;
+    this.valueDOM.textContent = this.value;
+  }
+  reset() {
+    this.value = 0;
+    this.valueDOM.textContent = this.value;
+  }
+  
+}
+
+const firstCounter = new Counter(getElement('.first-counter'), 100);
+const secondCounter = new Counter(getElement('.second-counter'), 200);
+

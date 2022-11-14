@@ -7,7 +7,7 @@ const data = [
   },
   {
     id: 'counter',
-    href: './Pages/counter/counter.html',
+    href: './Pages/SimpleCounter/counter.html',
     img: './img/image02.webp',
     footer: 'Simple Counter'
   },
@@ -103,4 +103,36 @@ const items = data.map(item => (
 ))
 
 
+
 document.getElementById('projects').innerHTML = items.join('')
+
+
+const courses = [
+  {
+    id: 'counter',
+    href: './Pages/Counter/counter.html',
+    img: './img/image16.webp',
+    footer: 'Counter'
+  },
+  {
+    id: 'gallery',
+    href: './Pages/Gallery/gallery.html',
+    img: './img/image17.webp',
+    footer: 'Gallery'
+  }
+]
+
+
+const course = courses.map(item => (
+  `<a class='section__item' href=${item.href} target="_blank" key=${item.id}>
+    <div class='item__content'>
+      <img class='item__content-img' src=${item.img} alt=${item.id}/>
+    </div>
+    <footer class='item__footer'>
+      <h5>${item.footer}</h5>
+    </footer>
+  </a>`
+))
+
+
+document.getElementById('courses').innerHTML = course.join('')

@@ -90,3 +90,7 @@ h2.title::after {
   background: #fff;
   border-radius: 0 0 0.3rem 0.3rem;
 }
+
+#projects {
+  padding-bottom: 10rem;
+}
