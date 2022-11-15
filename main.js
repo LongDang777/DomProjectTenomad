@@ -119,6 +119,18 @@ const courses = [
     href: './Pages/Gallery/gallery.html',
     img: './img/image17.webp',
     footer: 'Gallery'
+  },
+  {
+    id: 'darkModa',
+    href: './Pages/DarkMode/darkMode.html',
+    img: './img/image18.webp',
+    footer: 'Dark Mode'
+  },
+  {
+    id: 'dadJokes',
+    href: './Pages/DadJokes/dadJokes.html',
+    img: './img/image19.webp',
+    footer: 'Dad Jokes'
   }
 ]
 
