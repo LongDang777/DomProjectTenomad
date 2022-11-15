@@ -8,18 +8,14 @@ btn.addEventListener('click', () => {
 });
 
 const fetchDadJoke = async () => {
-  try {
-    const response = await fetch(url, {
-      headers: {
-        Accept: 'application/json',
-        'User-Agent': 'Long Dang',
-      },
-    });
-    const data = await response.json();
-    result.textContent = data.joke;
-  } catch (error) {
-    console.log('Loi API: ==>', error.message);
-  }
+  const response = await fetch(url, {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': 'learning app',
+    },
+  });
+  const data = await response.json();
+  result.textContent = data.joke;
 };
 
 fetchDadJoke();
