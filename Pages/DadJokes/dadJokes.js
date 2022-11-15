@@ -12,14 +12,13 @@ const fetchDadJoke = async () => {
     const response = await fetch(url, {
       headers: {
         Accept: 'application/json',
-        'User-Agent': 'learning app',
+        'User-Agent': 'Long Dang',
       },
     });
     const data = await response.json();
-    console.log(data);
     result.textContent = data.joke;
   } catch (error) {
-    console.log( error.message);
+    console.log('Loi API: ==>', error.message);
   }
 };
 

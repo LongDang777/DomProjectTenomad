@@ -81,6 +81,8 @@ const filterCompany = (e) => {
 companiesDOM.addEventListener('click', (e) => {
   const btn = e.target;
   if (btn.classList.contains('company-btn')) {
+    // btn.classList.add('active')
+
     if (btn.dataset.id === 'all') {
       filProducts = [...products];
     } else {

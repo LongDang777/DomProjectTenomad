@@ -8,3 +8,8 @@
 .result {
   font-size: 1.5rem;
 }
+
+.btn:active {
+  background: #ecb598;
+  color: #333;
+}

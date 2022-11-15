@@ -121,15 +121,27 @@ const courses = [
     footer: 'Gallery'
   },
   {
-    id: 'darkModa',
-    href: './Pages/DarkMode/darkMode.html',
+    id: 'numbers',
+    href: './Pages/Numbers/numbers.html',
     img: './img/image18.webp',
+    footer: 'Numbers'
+  },
+  {
+    id: 'darkMode',
+    href: './Pages/DarkMode/darkMode.html',
+    img: './img/image19.webp',
     footer: 'Dark Mode'
   },
   {
-    id: 'dadJokes',
+    id: 'filters',
+    href: './Pages/Filters/filters.html',
+    img: './img/image20.webp',
+    footer: 'Filters'
+  },
+  {
+    id: 'darkJokes',
     href: './Pages/DadJokes/dadJokes.html',
-    img: './img/image19.webp',
+    img: './img/image21.webp',
     footer: 'Dad Jokes'
   }
 ]
