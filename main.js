@@ -143,9 +143,20 @@ const courses = [
     href: './Pages/DadJokes/dadjokes.html',
     img: './img/image21.webp',
     footer: 'Dad Jokes'
+  },
+  {
+    id: 'products',
+    href: './Pages/Products/products.html',
+    img: './img/image22.webp',
+    footer: 'Products'
+  },
+  {
+    id: 'ramdonUser',
+    href: './Pages/Random/random.html',
+    img: './img/image23.webp',
+    footer: 'Random User'
   }
 ]
-
 
 const course = courses.map(item => (
   `<a class='section__item' href=${item.href} target="_blank" key=${item.id}>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./random.css">
+  <title>Random Person</title>
+</head>
+<body>
+  <div class="block bcg-black"></div>
+  <div class="block">
+    <div class="container">
+     <div >
+      <img
+      src="https://randomuser.me/api/portraits/women/49.jpg"
+      class="user-img"
+      alt="user "
+    />
+     </div>
+      <p class="user-title">Hi, My name is</p>
+      <p class="user-value">Rachel Welch</p>
+      <div class="values-list">
+
+        <button class="icon active" data-id="name">
+          <span class="far fa-user"></span>
+        </button>
+        
+        <button class="icon" data-id="email">
+          <span class="far fa-envelope-open"></span>
+        </button>
+   
+        <button class="icon" data-id="age">
+          <span class="far fa-calendar-times"></span>
+        </button>
+ 
+        <button class="icon" data-id="street">
+          <span class="far fa-map"></span>
+        </button>
+   
+        <button class="icon" data-id="phone">
+          <span class="fas fa-phone"></span>
+        </button>
+  
+        <button class="icon" data-id="password">
+          <span class="fas fa-user-lock"></span>
+        </button>
+
+      </div>
+      <button class="btn" type="button">random user</button>
+    </div>
+  </div>
+  <script type="module" src="./random.js"></script>
+</body>
+</html>
