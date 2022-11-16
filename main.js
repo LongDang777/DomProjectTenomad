@@ -140,7 +140,7 @@ const courses = [
   },
   {
     id: 'darkJokes',
-    href: './Pages/DadJokes/dadjokes.html',
+    href: './Pages/dad/dadjokes.html',
     img: './img/image21.webp',
     footer: 'Dad Jokes'
   },
