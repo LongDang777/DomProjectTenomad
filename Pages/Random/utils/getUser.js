@@ -5,6 +5,7 @@ const getUser = async () => {
   const data = await response.json();
 
   const person = data.results[0];
+  
   const { phone, email } = person;
   const { number, name } = person.location.street;
   const { password } = person.login;

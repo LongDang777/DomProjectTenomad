@@ -155,6 +155,12 @@ const courses = [
     href: './Pages/Random/random.html',
     img: './img/image23.webp',
     footer: 'Random User'
+  },
+  {
+    id: 'Cocktails',
+    href: './Pages/Cocktails/cocktails.html',
+    img: './img/image24.webp',
+    footer: 'Cocktails'
   }
 ]
 
