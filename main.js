@@ -168,7 +168,7 @@ const courses = [
   },
   {
     id: "stripe",
-    href: "./Pages/Stripe/stripe.html",
+    href: "./Pages/stripe26/stripes.html",
     img: "./img/image26.webp",
     footer: "stripe",
   },
