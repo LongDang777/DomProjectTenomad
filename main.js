@@ -157,10 +157,16 @@ const courses = [
     footer: 'Random User'
   },
   {
-    id: 'Cocktails',
+    id: 'cocktails',
     href: './Pages/Cocktails/cocktails.html',
     img: './img/image24.webp',
     footer: 'Cocktails'
+  },
+  {
+    id: 'slider',
+    href: './Pages/SliderReview/slider.html',
+    img: './img/image25.webp',
+    footer: 'Slider'
   }
 ]
 
