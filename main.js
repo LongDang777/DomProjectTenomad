@@ -166,12 +166,6 @@ const courses = [
     img: "./img/image25.webp",
     footer: "Slider",
   },
-  {
-    id: "stripe",
-    href: "./Pages/Stripe/stripe.html",
-    img: "./img/image25.webp",
-    footer: "Stripe Submenus",
-  },
 ];
 
 const course = courses.map(
