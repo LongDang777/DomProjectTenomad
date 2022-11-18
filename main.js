@@ -167,6 +167,12 @@ const courses = [
     href: './Pages/SliderReview/slider.html',
     img: './img/image25.webp',
     footer: 'Slider'
+  },
+  {
+    id: 'stripe',
+    href: './Pages/Stripe/stripe.html',
+    img: './img/image26.webp',
+    footer: 'Stripe Submenus'
   }
 ]
 
