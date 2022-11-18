@@ -173,7 +173,7 @@ const courses = [
     href: './Pages/Stripe/stripe.html',
     img: './img/image26.webp',
     footer: 'Stripe Submenus'
-  }
+  },
 ]
 
 const course = courses.map(item => (
