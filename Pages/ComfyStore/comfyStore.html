@@ -13,21 +13,21 @@
 <body>
   <nav class="navbar">
     <div class="nav-center">
-      <button class="toggle-nav">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links">
-        <li><a href="comfyStore.html" class="nav-link">Home</a></li>
-        <li><a href="products.html" class="nav-link">Products</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-      </ul>
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="comfyStore.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
       <img src="./imgs/logo-white.svg" alt="logo" class="nav-logo">
-    </div>
-    <div class="toggle-container">
-      <button class="toggle-cart">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-item-count">0</span>
-      </button>
+      <div class="toggle-container">
+        <button class="toggle-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-item-count">0</span>
+        </button>
+      </div>
     </div>
   </nav>
   <section class="carousel">
@@ -61,6 +61,23 @@
       </ul>
     </aside>
   </div>
+  <div class="cart-overlay">
+    <aside class="cart">
+      <button class="cart-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <header>
+        <h3 class="text-slanted">your bag</h3>
+      </header>
+      <div class="cart-items"></div>
+      <footer>
+        <h3 class="cart-total text-slanted">total : &78.99</h3>
+        <button class="cart-checkout btn">checkout</button>
+      </footer>
+    </aside>
+  </div>
+  
+
   <script type="module" src="./comfyStore.js"></script>
 </body>
 
