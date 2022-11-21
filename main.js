@@ -170,7 +170,25 @@ const courses = [
     id: "stripe",
     href: "./Pages/stripe26/stripes.html",
     img: "./img/image26.webp",
-    footer: "stripe",
+    footer: "Stripe",
+  },
+  {
+    id: "pagination",
+    href: "./Pages/Pagination/pagination.html",
+    img: "./img/image27.webp",
+    footer: "Pagination",
+  },
+  {
+    id: "wikipedia",
+    href: "./Pages/Wikipedia/wikipedia.html",
+    img: "./img/image28.webp",
+    footer: "Wikipedia",
+  },
+  {
+    id: "comfyStore",
+    href: "./Pages/ComfyStore/comfyStore.html",
+    img: "./img/image29.webp",
+    footer: "Comfy Store",
   },
 ];
 

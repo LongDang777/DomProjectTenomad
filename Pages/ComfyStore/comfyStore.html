@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="./comfyStore.css">
+  <title>Home | Comfy</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-center">
+      <button class="toggle-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="comfyStore.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+      <img src="./imgs/logo-white.svg" alt="logo" class="nav-logo">
+    </div>
+    <div class="toggle-container">
+      <button class="toggle-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-item-count">0</span>
+      </button>
+    </div>
+  </nav>
+  <section class="carousel">
+    <div class="carousel-container">
+      <h1 class="text-slanted">rest, relax, unwind</h1>
+      <h3>Embrace your choices - we do</h3>
+      <a href="products.html" class="carousel-btn">show now</a>
+    </div>
+  </section>
+  <div class="sidebar-overlay">
+    <aside class="sidebar">
+      <button class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="sidebar-links">
+        <li>
+          <a class="sidebar-link" href="comfyStore.html">
+            <i class="fas fa-home fa-fw"></i>home
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" href="comfyStore.html">
+            <i class="fas fa-couch fa-fw"></i>products
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" href="comfyStore.html">
+            <i class="fas fa-book fa-fw"></i>about
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <script type="module" src="./comfyStore.js"></script>
+</body>
+
+</html>
