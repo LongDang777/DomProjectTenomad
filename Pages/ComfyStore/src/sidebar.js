@@ -5,7 +5,6 @@ const closeNav = getElement('.sidebar-close');
 const sidebar = getElement('.sidebar-overlay');
 
 openNav.addEventListener('click', ()=>{
-  console.log('kaka');
   sidebar.classList.add('show');
 })
 

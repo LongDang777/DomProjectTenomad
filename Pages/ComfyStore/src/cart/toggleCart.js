@@ -1,4 +1,5 @@
-import { getElement } from "../src/utils.js";
+import { getElement } from "../utils.js";
+
 
 const cartOverlay = getElement(".cart-overlay");
 const toggleCart = getElement(".toggle-cart");
@@ -14,7 +15,7 @@ closeCart.addEventListener("click", () => {
 
 getElement("body").addEventListener("click", (e) => {
   if (e.target.classList.contains("show")) {
-    cartOverlay.classList.remove("show");
+    cartOverlay.classList.toggle("show");
   }
 });
 
