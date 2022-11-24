@@ -10,7 +10,7 @@ const setupCompanies = (store) => {
     })
     .join('');
   companiesDOM.addEventListener('click', function (e) {
-    const element = e.target;
+    const element = e.target;   
     if (element.classList.contains('company-btn')) {
       let newStore = [];
       if (element.textContent === 'all') {

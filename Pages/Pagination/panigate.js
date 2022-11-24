@@ -1,6 +1,6 @@
 const paginate = (ArrayUser) => {
   const itemOfPage = 10;
-  const numberOfPages = ArrayUser.length / itemOfPage; //Math.ceil
+  const numberOfPages = 100 / itemOfPage; //Math.ceil
   
   const newUserS = Array.from({ length: numberOfPages }, (_, index) => {
     const start = index * itemOfPage;

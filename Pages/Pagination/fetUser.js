@@ -1,9 +1,16 @@
-const url = "https://api.github.com/users/john-smilga/followers?per_page=100";
+const title = document.querySelector(".section-title h1");
 
-const fetUser = async () => {
-  const res= await fetch(url);
-  const data = res.json();
-  return data
-};
+const fetUser = async (url) => {
+  title.textContent = "pagination";
+  try {
+    const res = await fetch(url)
+    const data = await res.json();
+    return data
+  } catch (error) {
+    console.log('loi api==>', error);
+  }
+}
 
-export default fetUser;
+
+export default fetUser
+

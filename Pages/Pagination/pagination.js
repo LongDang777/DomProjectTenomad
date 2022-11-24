@@ -1,43 +1,42 @@
 import fetUser from "./fetUser.js";
-import paginate from "./panigate.js";
 import renderBtn from "./renderBtnPage.js";
 import renderUsers from "./renderUser.js";
 
 const btnContainer = document.querySelector(".btn-container");
 const title = document.querySelector(".section-title h1");
-let index = 0;
-let pages = [];
 
-const setupUI = () => {
-  renderUsers(pages[index]);
-  renderBtn(btnContainer, pages, index);
-};
+let index = 1;
+const url = (page) => `http://localhost:3000/get?_page=${page}`;
 
-const data = async () => {
-  const users = await fetUser();
+const init = (users, indexPage)=>{
+  renderBtn(btnContainer, indexPage);
+  renderUsers(users);
+}
+
+const data = async (indexPage) => {
   title.textContent = "pagination";
-  pages = paginate(users);
-  setupUI();
+  const users = await fetUser(url(indexPage));
+  init(users, indexPage)
 };
 
-btnContainer.addEventListener('click', function (e) {
+btnContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains('btn-container')) return
-  if (e.target.classList.contains('page-btn')) {
-    index = parseInt(e.target.dataset.index)
+  if (e.target.classList.contains("page-btn")) {
+    index = parseInt(e.target.dataset.index);
   }
-  if (e.target.classList.contains('next-btn')) {
-    index++
-    if (index > pages.length - 1) {
-      index = 0
+  if (e.target.classList.contains("next-btn")) {
+    index++;
+    if (index > 10) {
+      index = 1;
     }
   }
-  if (e.target.classList.contains('prev-btn')) {
-    index--
+  if (e.target.classList.contains("prev-btn")) {
+    index--;
     if (index < 0) {
-      index = pages.length - 1
+      index = 1;
     }
   }
-  setupUI()
-})
+  data(index)
+});
 
-window.addEventListener('load', data)
+window.addEventListener("load", data(index));
