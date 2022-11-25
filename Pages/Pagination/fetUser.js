@@ -1,7 +1,10 @@
-const title = document.querySelector(".section-title h1");
+const container = document.querySelector(".container");
+const loading = document.querySelector(".loading");
+
 
 const fetUser = async (url) => {
-  title.textContent = "pagination";
+  container.style.opacity= '0';
+  loading.style.display= 'block';
   try {
     const res = await fetch(url)
     const data = await res.json();

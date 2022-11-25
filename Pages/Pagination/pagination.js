@@ -2,11 +2,13 @@ import fetUser from "./fetUser.js";
 import renderBtn from "./renderBtnPage.js";
 import renderUsers from "./renderUser.js";
 
+const container = document.querySelector(".container");
 const btnContainer = document.querySelector(".btn-container");
 const title = document.querySelector(".section-title h1");
+const loading = document.querySelector(".loading");
 
 let index = 1;
-const url = (page) => `http://localhost:3000/get?_page=${page}`;
+const url = (page) => `https://api.github.com/users/john-smilga/followers?per_page=8&page=${page}`;
 
 const init = (users, indexPage)=>{
   renderBtn(btnContainer, indexPage);
@@ -16,6 +18,9 @@ const init = (users, indexPage)=>{
 const data = async (indexPage) => {
   title.textContent = "pagination";
   const users = await fetUser(url(indexPage));
+  loading.style.display= 'none';
+  container.style.opacity= '1';
+
   init(users, indexPage)
 };
 

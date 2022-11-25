@@ -242,3 +242,25 @@ Pagination
     max-width: 700px;
   }
 }
+
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 10rem;
+  height: 10rem;
+  border: 5px solid var(--clr-grey-8);
+  border-radius: 50%;
+  border-top-color: var(--clr-primary-5);
+  animation: spinner 0.6s linear infinite;
+}
+.loading {
+  position: absolute;
+  top: 60%;
+  left: 44.5%;
+  display: none;
+}
