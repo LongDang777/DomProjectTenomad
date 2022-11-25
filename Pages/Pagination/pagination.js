@@ -8,7 +8,7 @@ const title = document.querySelector(".section-title h1");
 const loading = document.querySelector(".loading");
 
 let index = 1;
-const url = (page) => `https://api.github.com/users/john-smilga/followers?per_page=8&page=${page}`;
+const api = (page) => `https://api.github.com/users/john-smilga/followers?per_page=8&page=${page}`;
 
 const init = (users, indexPage)=>{
   renderBtn(btnContainer, indexPage);
@@ -17,7 +17,7 @@ const init = (users, indexPage)=>{
 
 const data = async (indexPage) => {
   title.textContent = "pagination";
-  const users = await fetUser(url(indexPage));
+  const users = await fetUser(api(indexPage));
   loading.style.display= 'none';
   container.style.opacity= '1';
 
