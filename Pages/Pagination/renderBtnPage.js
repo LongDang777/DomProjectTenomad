@@ -1,14 +1,12 @@
-const btnData = [1,2,3,4,5,6,7,8,9,10]
-
 
 const rederBtn = (container, index) => {
   
-  let btns = btnData.map(( btn, pageIndex) => {
+  let btns = Array(10).fill(1).map(( _, pageIndex) => {
     // console.log(index);
     return (
       `<button class="page-btn 
       ${index === (++pageIndex )? "active-btn" : "null "}" data-index="${pageIndex}">
-      ${btn}
+      ${pageIndex}
       </button>`
       )
     });
